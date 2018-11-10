@@ -7,6 +7,8 @@
 #include <memory>
 #include <string>
 
+#include <libbackend.hpp>
+
 
 namespace pdal {
 
@@ -23,15 +25,12 @@ namespace pdal {
     }
 
     void PdalRust::addSwitches(ProgramArgs& args) {
-        args.add("input,i", "Input filename", m_input_file).setPositional();
-        args.add("output,o", "Output filename", m_output_file).setPositional();
+        args.add("say", "something", sayWhat);
     }
 
     int PdalRust::execute()
     {
-        PointTable table;
-        Stage& reader = makeReader(m_input_file, "readers.las");
-
+        say(sayWhat.c_str());
         return 0;
     }
 }
