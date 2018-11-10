@@ -21,9 +21,7 @@ else()
     message(WARNING "The file conanbuildinfo.cmake doesn't exist, you have to run conan install first")
 endif()
 
-set(PDAL_VERSION_MAJOR 1)
-set(PDAL_VERSION_MINOR 6)
-find_package(PDAL "${PDAL_VERSION_MAJOR}.${PDAL_VERSION_MINOR}.0" REQUIRED CONFIG)
+find_package(PDAL REQUIRED CONFIG)
 
 find_package(Threads REQUIRED)
 set(CMAKE_THREAD_PREFER_PTHREAD TRUE)

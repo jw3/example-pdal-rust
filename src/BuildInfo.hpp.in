@@ -22,7 +22,7 @@ const std::string PluginDescription = "Example Rust integration v${FULL_VERSION_
 
 const std::string PluginURL = "http://link/to/documentation";
 
-const std::string PDALStageName = "kernels.${CMAKE_PROJECT_NAME}";
+const std::string PDALStageName = "kernels.rust";
 
 const std::string GitCommitId = "${GIT_COMMIT_ID}";
 
